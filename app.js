@@ -15,16 +15,6 @@ var dogadjaji = require('./routes/dogadjaji');
 
 // PATH TO MODELS FILE
 
-//CONECT TO DATABASE
-// mongoose.connect('mongodb://localhost:27017/farmStand', {useNewUrlParser: true,useCreateIndex: true, useUnifiedTopology: true})
-//     .then(() => {
-//         console.log("Database connected");
-//     })
-//     .catch(err => {
-//         console.log("Connection error");
-//         console.log(err);
-//     });
-
 //USE EXPRESS
 var app = express();
 
