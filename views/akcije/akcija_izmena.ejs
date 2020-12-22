@@ -1,0 +1,37 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container">
+    <h2>Izmeni: <%= title %></h2>
+    <form action="/akcije/<%= akcija._id %>?_method=PUT" method="POST">
+        <!-- Title -->
+        <div class="form-group">
+            <label for="title">Naziv</label>
+            <input type="text" class="form-control" id="title" name="akcija[title]" value="<%= akcija.title %>" required>
+        </div>
+    
+        <!-- Introduction -->
+        <div class="form-group">
+            <label for="introduction">Uvodni tekst</label>
+            <textarea  type="text" class="form-control" id="introduction" name="akcija[introduction]" rows="3" required><%= akcija.introduction %></textarea>
+        </div>
+    
+        <!-- description -->
+        <div class="form-group">
+            <label for="description">Opis Događaja</label>
+            <textarea type="text" class="form-control" id="description" name="akcija[description]" rows="3" required><%= akcija.description %></textarea>
+        </div>
+    
+         <!-- Date -->
+         <div class="form-group">
+            <label for="date">Datum</label>
+            <input type="text" class="form-control" id="date" name="akcija[date]" value="<%= akcija.date %>" required>
+        </div>
+
+        <!-- Dugme -->
+        <button type="submit" class="btn">Izvrši izmenu</button>
+    </form>
+
+     <!-- Dugme nazad -->
+    <a href="/akcije/<%= akcija._id %>" class="nazad">Nazad</a>
+</div>
+

@@ -1,0 +1,42 @@
+<% layout('layouts/boilerplate') %>
+
+<section class="akcija">
+    <!-- Intro -->
+    <div class="intro mt-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-center mb-3">
+                        <%= akcija.title %>
+                    </h3>
+
+                    <p class="lead" style="white-space: pre-wrap;"><%= akcija.introduction %></p>
+                </div>
+                <div class="col-md-6">
+                    <img src="/images/slider/NGkoncert.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Opis dogadjaja -->
+    <div class="opis">
+        <div class="container">
+            <h2>Opis akcije</h2>
+            <p class="lead" style="white-space: pre-wrap;"><%= akcija.description %></p>
+            <h6 class="lead text-right"><%= akcija.date %></h6>
+        </div>
+    </div>
+
+
+</section>
+
+<div class="container">
+    <div class="row dugme mb-3 justify-content-center">
+        <a href="/akcije/<%= akcija._id %>/edit" class="btn mr-5">Izmeni akciju</a>
+
+        <form action="/akcije/<%= akcija._id %>?_method=DELETE" method="POST">
+            <button class="btn">Obrisi akciju</button>
+        </form>
+    </div>
+</div>
