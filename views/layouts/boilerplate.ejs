@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="/stylesheets/main.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="/stylesheets/<%= style %>">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/stylesheets/all.min.css">
+
+    <title><%= title %></title>
+</head>
+<body class="d-flex flex-column">
+
+    <%- include('../partials/navbar') %>
+        <!-- Icons  -->
+        <div class="icons">
+            <ul>
+                <a href="https://www.facebook.com/RotaractClubNis/">
+                    <li class="facebook"><i class="fab fa-facebook-f"></i>
+                        <!-- </i></i> -->
+                    </li>
+                </a>
+                <a href="https://twitter.com/RotaractClubNis/">
+                    <li class="twitter"><i class="fab fa-twitter"></i> </li>
+                </a>
+                <a href="https://www.instagram.com/rotaractclubnis/">
+                    <li class="instagram"><i class="fab fa-instagram"></i> </li>
+                </a>
+            </ul>
+        </div>
+
+        <!-- TODO: Dodati chat bot ako stignes -->
+        <%- body %>
+
+    <%- include('../partials/footer') %>
+
+
+    
+    <!-- jQery JavaScript -->
+    <script src="/javascript/jquery.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="/javascript/bootstrap.min.js"></script>
+    <!-- Font Awesome JavaScript -->
+    <script src="/javascript/all.min.js"></script>
+    <!-- Page JS -->
+    <script src="/javascript/<%= js %>"></script>
+</body>
+</html>
