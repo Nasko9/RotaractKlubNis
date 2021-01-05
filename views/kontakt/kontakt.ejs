@@ -1,0 +1,49 @@
+<% layout('layouts/boilerplate') %>
+
+<section class="kontakt mt-3">
+    <div class="container">
+        <div class="row">
+            <!-- Naslov -->
+            <div class="col-lg-12">
+                <h3 class="mb-3 text-center">Kontakt</h3>
+            </div>
+            <!-- Forma -->
+            <div class="col-lg-6">
+                <form action="" method="" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="ime">Ime</label>
+                        <input type="text" class="form-control" id="ime" name="ime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prezime">Prezime</label>
+                        <input type="text" class="form-control" id="prezime" name="prezime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email adresa</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="poruka">Poruka</label>
+                        <textarea class="form-control" id="poruka" name="poruka" required rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Pošalji</button>
+                  </form>
+            </div>
+
+            <!-- Mreze i drugi linkovi -->
+            <div class="col-lg-6">
+                <div class="mreze">
+                    <h5>Email:</h5>
+                    <p>rotaractclubnis@gmail.com</p>
+
+                    <h5>Drustvene mreze: </h5>
+                    <div class="social">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

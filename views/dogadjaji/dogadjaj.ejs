@@ -1,0 +1,67 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container">
+    <div class="row dugme mb-3 justify-content-center">
+        <a href="/dogadjaji/<%= dogadjaj._id %>/edit" class="btn mr-5">Izmeni događaj</a>
+
+        <form action="/dogadjaji/<%= dogadjaj._id %>?_method=DELETE" method="POST">
+            <button class="btn">Obriši događaj</button>
+        </form>
+    </div>
+</div>
+
+<section class="dogadjaj">
+        <!-- Intro -->
+        <div class="intro mt-4 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="text-center mb-3">
+                            <%= dogadjaj.title %>
+                        </h3>
+    
+                        <p class="lead" style="white-space: pre-wrap;"><%= dogadjaj.introduction %></p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="/images/slider/NGkoncert.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Opis dogadjaja -->
+        <div class="opis">
+            <div class="container">
+                <h2>Opis dogadjaja</h2>
+                <p class="lead" style="white-space: pre-wrap;"><%= dogadjaj.description %></p>
+                <h6 class="lead text-right"><%= dogadjaj.date %></h6>
+            </div>
+        </div>
+</section>
+
+<section class="komentari mb-3">
+    <div class="container">
+        <!-- Forma za novi komentar -->
+        <form action="/dogadjaji/<%= dogadjaj._id %>/komentari" method="POST" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label class="form-label" for="body">Ostavite komentar</label>
+                <textarea class="form-control" name="komentar[body]" id="body" rows="3" maxlength="250" required></textarea>
+            </div>
+            <button class="btn">Pošalji komentar</button>
+        </form>
+
+        <h3 class="mt-4 mb-3">Komentari</h3>
+
+        <!-- Prikaz komentara -->
+        <% for(let komentar of dogadjaj.komentari.reverse()) { %>
+            <div class="card mt-2">
+                <div class="card-body">
+                    <p class="card-text"><%= komentar.body %></p> 
+                    <form action="/dogadjaji/<%= dogadjaj._id %>/komentari/<%= komentar._id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-sm"> Obriši komentar </button>
+                    </form>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</section>
