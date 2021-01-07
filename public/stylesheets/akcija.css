@@ -1,0 +1,61 @@
+/* Dugme za izmenu i brisanje*/
+.dugme .btn{
+    background-color: #f9136b;
+    color: white;
+}    
+
+.dugme .btn:hover {
+    border: 1px solid #f9136b;
+    background-color: white;
+    color:#f9136b;
+}
+
+/* Komentari */
+textarea{
+    resize: none;
+}
+
+.komentari .btn{
+    background-color: #f9136b;
+    color: white;
+}    
+
+.komentari .btn:hover {
+    border: 1px solid #f9136b;
+    background-color: white;
+    color:#f9136b;
+}
+
+.komentari form {
+    align-content: center;
+    width: 60%;
+}
+
+/* !Responsive */
+/* Fold */
+@media(max-width: 280.98px){
+    .komentari form {
+        width: 100%;
+    }
+}
+
+/* XS */
+@media(max-width: 575.98px){
+    .komentari form {
+        width: 100%;
+    }
+}
+
+/* MD */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .komentari form {
+        width: 70%;
+    }
+}
+
+/* LG */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .komentari form {
+        width: 70%;
+    }
+}
