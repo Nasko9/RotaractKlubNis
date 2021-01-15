@@ -1,0 +1,143 @@
+/* Generalno za sve */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar-brand img {
+    height: 7vh;
+}
+
+.nav-item {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    transition: 0.5s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #de68a3;
+    border-left: 2px solid #de68a3;
+    border-right: 2px solid #de68a3;
+}
+
+#navigation {
+    padding-bottom: 0px;
+}
+
+/* Footer */
+footer{
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+footer #linkovi a{ 
+    text-decoration: none;
+    color: white;
+}
+
+/* Potpis */
+.copyright{
+    padding: 0.7rem;
+}
+
+.copyright .container{
+    border-top: 1px solid white;
+    padding: 0.7rem;
+}
+
+/* Icons */
+.icons {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    position: fixed;
+    z-index: 100;
+}
+
+.icons ul {
+    padding: initial;
+}
+
+.icons ul li {
+    height: 40px;
+    width: 40px;
+    list-style-type: none;
+    padding-left: 12px;
+    padding-top: 6px;
+    margin-top: 5px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #55acee;
+}
+
+.instagram {
+    background-color: #ff4800;
+}
+
+.email {
+    background-color: grey;
+}
+
+.icons ul li:hover {
+    padding-left: 30px;
+    width: 70px;
+    transition: 0.5s;
+}
+
+/* !Responsive */
+/* Fold */
+@media(max-width: 280.98px){
+    /* navbar */
+    .navbar-brand img {
+        height: 5vh;
+    }
+
+    /* Footer */
+    #logo{
+        display: none;
+    }
+}
+
+/* XS */
+@media(max-width: 575.98px){
+    /* Footer */
+    .col-lg-4{
+        margin-top: 1rem;
+    }
+    /* Potpis */
+    .copyright .container{
+        flex-direction: column;
+        margin-bottom: 0.2rem;
+    }
+
+    /* icons */
+    .icons{
+        display: none;
+    }
+}
+
+/* MD */
+@media (min-width: 768px) and (max-width: 991.98px){
+    /* Footer*/
+    .col-lg-4{
+        margin-top: 1rem;
+    }
+
+    /* Potpis */
+    .copyright .container{
+        border-top: none;
+    }
+}

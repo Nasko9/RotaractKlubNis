@@ -1,0 +1,54 @@
+.kontakt{
+    margin-bottom: 6rem;
+}
+
+.btn{
+    background-color: #f9136b;
+    color: white;
+    width: 100%;
+}
+
+.btn:hover{
+    border: 1px solid #f9136b;
+    background-color: white;
+    color:#f9136b
+}
+
+.kontakt h5{
+    font-weight: 400;
+}
+
+.mreze{
+    margin-top: 1rem;
+    margin-left: 5rem;
+}
+
+.kontakt .mreze .social a .svg-inline--fa  {
+    background-color: #f9136b;
+    color: white;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 5px;   
+    margin-right: 1rem;
+}
+
+/* !RESPONSIVE */
+
+/* XS */
+@media (max-width: 575.98px){
+    /* Kontakt */
+    .mreze{
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+}
+
+/* MD */
+@media (min-width: 768px) and (max-width: 991.98px){
+    /* Kontakt */
+    .mreze{
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+}

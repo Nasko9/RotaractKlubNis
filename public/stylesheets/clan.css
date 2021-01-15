@@ -1,0 +1,67 @@
+div .content h1 {
+    padding-top: 20px;
+    color: #f9136b;
+}
+
+div .content {
+    padding-bottom: 20px;
+}
+.col-lg-6 img {
+    width: 500px;
+    align-self: center;
+}
+
+/* Dugme za izmenu i brisanje*/
+.dugme  .btn{
+    background-color: #f9136b;
+    color: white;
+}    
+
+.dugme .btn:hover {
+    border: 1px solid #f9136b;
+    background-color: white;
+    color:#f9136b;
+}
+
+
+/* !Responsive */
+/* Fold */
+@media(max-width: 280.98px){
+    .col-lg-6 img {
+        width: 100%;
+        align-self: center;
+    }
+
+    div .content h1 {
+        font-size: 2rem;
+    }
+
+    div .content h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* XS */
+@media(max-width: 575.98px){
+    .col-lg-6 img {
+        width: 100%;
+        align-self: center;
+    }
+}
+
+/* MD */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .col-lg-6 img {
+        width: 60%;
+        align-self: center;
+    }
+}
+
+/* LG */
+@media (min-width: 992px) and (max-width: 1199.98px){
+    /* Clanovi */
+    .col-lg-6 img {
+        width: 90%;
+        align-self: center;
+    }
+}

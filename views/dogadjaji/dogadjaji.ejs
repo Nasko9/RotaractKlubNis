@@ -1,0 +1,84 @@
+<% layout('layouts/boilerplate') %>
+
+<!-- Dogadjaji -->
+<div class="dogadjaji">
+    <div class="container">
+        <% if(currentUser && currentUser.isAdmin){ %>
+            <!-- Dodaj dogadjaj -->
+            <a href="/dogadjaji/novi_dogadjaj" class="btn mb-3">Novi dogadjaj</a>
+        <% } %>
+
+        <div class="row">
+            <div class="col-lg-12 text-center mt-4">
+                <h2 class="text-center mb-4">Događaji</h2>
+            </div>
+        </div>
+        
+        <% for (let dogadjaj of dogadjaji) { %>
+            <div class="row mb-3">
+                <div class="col-2">
+                    <div class="datum d-flex flex-column text-center">
+                        <i class="far fa-calendar align-self-center mb-2"></i>
+                        <span style="white-space: pre-wrap;"><%= dogadjaj.date %></span>
+                    </div>
+                </div>
+                <div class="col-10 d-flex flex-column">
+                    <h4><%= dogadjaj.title %></h4>
+                    <p><%= dogadjaj.introduction %></p>
+                    <a href="/dogadjaji/<%= dogadjaj._id%>" class="dugme">Saznaj više</a>
+                </div>
+            </div>
+        <% } %>
+    
+
+        <% if (pages > 0) { %>
+            <ul class="pagination justify-content-center">
+                <% if (current == 1) { %>
+                    <li class="page-item disabled">
+                        <a class="page-link">First</a>
+                    </li>
+                <% } else { %>
+                    <li class="page-item">
+                        <a href="/dogadjaji/?page=1" class="page-link">First</a>
+                    </li>
+                <% } %>
+
+                <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+
+                <% if (i !== 1) { %>
+                    <li class="page-item disabled">
+                        <a class="page-link">...</a>
+                    </li>
+                <% } %>
+
+                <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                    <% if (i == current) { %>
+                        <li class="active">
+                            <a class="page-link"><%= i %></a>
+                        </li>
+                    <% } else { %>
+                        <li class="page-item">
+                            <a href="/dogadjaji/?page=<%= i %>" class="page-link"><%= i %></a>
+                        </li>
+                    <% } %>
+
+                    <% if (i == Number(current) + 4 && i < pages) { %>
+                        <li class="page-item disabled">
+                            <a class="page-link">...</a>
+                        </li>
+                    <% } %>
+                <% } %>
+
+                <% if (current == pages) { %>
+                    <li class="page-item disabled">
+                        <a class="page-link">Last</a>
+                    </li>
+                <% } else { %>
+                    <li class="page-item">
+                        <a href="/dogadjaji/?page=<%= pages %>" class="page-link">Last</a>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
+</div>
