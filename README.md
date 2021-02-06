@@ -10,4 +10,4 @@ Kako bi ste uspešno pokrenuli aplikaciju potrebno je da uradite sledeće:
    Aplikacija se pokreće pomoću komande node app.js
 5. Ako ste sve uspešno odradili na vašem terminalu bi trebalo da se ispiše poruka
    Database conected i Server listen on port 3000
-  
+6. Ukoliko su se ispisale poruke na terminalu možete slobodno da koristite aplikaciju.
