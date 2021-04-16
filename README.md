@@ -1,6 +1,8 @@
 # RotaractKlubNis
 Ovo je projekat iz predmeta klijent-Server sistemi
 
+Tehnologije koje su korišćene u izradi projekta na klijentskoj strani su HTML, CSS sa Bootstrap framework-om i JavaScript, dok su na serverskoj strani korišćeni NodeJS sa Express framework-om i MongoDB za rad sa bazom podataka.
+
 Da bi ste uspešno pokrenuli aplikaciju potrebno je da uradite sledeće:
 1. Potrebno je da na vašem račnaru imate instaliran Nodejs.
 2. Pošto je u ovom projektu korišćena MongoDB baza potrebno je i nju da imate instaliranu na vašem računaru.
